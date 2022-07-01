@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="js/jquery.colorbox-min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/jquery.jcarousel.min.js"></script>
+      <script src="js/jcarousel.js"></script>
+      <link rel="stylesheet" href="template_styles.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/colorbox.css">
+      <link rel="stylesheet" href="css/vm_styles.css">
+      <link rel="stylesheet" href="css/comment.css">
+      <link rel="stylesheet" href="css/popupBacket/main.css">
+      <link rel="stylesheet" href="css/popupBacket/reset.css">
+      <script src="https://unpkg.com/imask"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+      <link rel="stylesheet" href="./css/slick.css">
+      <meta name="yandex-verification" content="e41b316c30defb55"/>
+      <style>
+         .b-and-t {
+         display: none;
+         }
+      </style>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26468814-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-26468814-1');
+      </script>
+   </head>
+   <body>
+      <!-- Rating Mail.ru counter -->
+      <script type="text/javascript">
+         var _tmr = window._tmr || (window._tmr = []);
+         _tmr.push({id: "3227414", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+         (function (d, w, id) {
+          if (d.getElementById(id)) return;
+          var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+          ts.src = "https://top-fwz1.mail.ru/js/code.js";
+          var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+          if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+         })(document, window, "topmailru-code");
+      </script>
+      <noscript>
+         <div>
+            <img src="https://top-fwz1.mail.ru/counter?id=32...js=na"; style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+         </div>
+      </noscript>
+      <!-- //Rating Mail.ru counter -->
+      <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+      <script type="text/javascript">
+         var _tmr = _tmr || [];
+         _tmr.push({
+            type: 'itemView',
+            productid: 'VALUE',
+            pagetype: 'VALUE',
+            list: 'VALUE',
+            totalvalue: 'VALUE'
+         });
+      </script>
+      <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+      <noscript><img height="1" width="1" style="display:none"
+         src="https://top-fwz1.mail.ru/tracker?id=3227414;e=RG%3A/trg-pixel-11667944-1632831841210;_={{random}}";
+         /></noscript>
+      <div id="ytWidget" class="hidden_lang_swithcer"></div>
+      <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false" type="text/javascript"></script>
+      <script>
+         $(document).on('click', '.js_change_lang', function(){
+         	let newLang = $(this).data('lang');
+         	$('.yt-button_type_right').trigger('click');
+         	$('#ytWidget .yt-listbox__input[value="'+newLang+'"]').parent().trigger('click');
+                $('.active_lang').removeClass('active_lang');
+                $(this).addClass('active_lang');
+                if(newLang != 'ru'){
+                 $('body').addClass('other_langs');
+                }else{
+                 $('body').removeClass('other_langs');
+                }
+         
+         	if( $(window).width() > 1000 ){
+         		if( typeof sidebar !== "undefined"){
+         			setTimeout(function(){
+         				sidebar.updateSticky();
+         console.log(sidebar);
+         			}, 1500);
+         		}
+         	}
+         
+         
+         });
+         $(document).ready(function(){
+             setTimeout(function(){
+               var selectedLang = $('#ytWidget input[type="radio"]:checked').val();
+               if(selectedLang == 'ru'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="ru"]').addClass('active_lang');
+                 $('body').removeClass('other_langs');
+               }
+               if(selectedLang == 'en'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="en"]').addClass('active_lang');
+                 $('body').addClass('other_langs');
+               }
+               if(selectedLang == 'zh'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="zh"]').addClass('active_lang');
+                 $('body').addClass('other_langs');
+               }
+               if(selectedLang == 'vi'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="vi"]').addClass('active_lang');
+                 $('body').addClass('other_langs');
+               }
+               $(window).trigger('resize');
+             }, 1000);
+         })
+      </script>
+      <script src="./js/slick.min.js"></script>
+      <script>
+         $(document).ready(function(){
+            $('.slick-slider2').slick({
+               infinite: true,
+               slidesToShow: 4,
+               slidesToScroll: 1,
+               speed: 800,
+               responsive: [
+                        {
+                           breakpoint: 1024,
+                           settings: {
+                              slidesToShow: 3,
+                              slidesToScroll: 1,
+                           }
+                        },
+                        {
+                           breakpoint: 700,
+                           settings: {
+                              slidesToShow: 2,
+                              slidesToScroll: 1,
+                           }
+                        },
+                        {
+                           breakpoint: 500,
+                           settings: {
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                           }
+                        },
+                     ],
+            })
+         })
+            
+      </script>
+      <div class="sandwich">
+         <span class="line_1"></span>
+         <span class="line_2"></span>
+         <span class="line_3"></span>
+      </div>
+      <div class="top-stripe">
+         <div class="wrapper">
+            <ul class="top-menu">
+               <li><a href="/o-dostavke/">Доставка и оплата</a></li>
+            </ul>
+            <div class="lang-switcher">
+               <div class="icon"></div>
+               <a href="javascript:void(0);" data-lang="ru" class="js_change_lang active_lang">Рус</a> | <a href="javascript:void(0);" data-lang="en" class="js_change_lang">Eng</a> | <a href="javascript:void(0);" data-lang="vi" class="js_change_lang">Vie</a> | <a href="javascript:void(0);" data-lang="zh" class="js_change_lang">Che</a>
+            </div>
+            <div class="login-register">
+               <div class="lk-icon"></div>
+               <a href="/personal/profile/?login=yes">Войти</a><a href="/personal/profile/?register=yes">Зарегистрироваться</a>
+            </div>
+            <div class="top-search-form" id="title-search">
+               <form action="/search/index.php">
+                  <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Поиск по сайту">
+                  <input name="s" type="submit" class="search-icon" value="Поиск">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="wrapper w-logo">
+         <div id="bx_basketFKauiI" class="bx-basket bx-opener">
+            <!--'start_frame_cache_bx_basketFKauiI'-->
+            <a href="/personal/cart/">
+               <div class="bx-basket-block">
+                  <div class="shoping-cart-icon"></div>
+                  3 шт. / 									1 881 руб.						
+               </div>
+            </a>
+            <div data-role="basket-item-list" class="bx-basket-item-list">
+               <div class="basket-inside">
+                  <h4 class="basket-inside-title">
+                     Ваш заказ
+                  </h4>
+                  <div class="basket-wrapper">
+                     <div id="bx_basketFKauiIproducts" class="basket-wrapper">
+                        <div class="basket-row">
+                           <div class="basket-description">
+                              <div class="basket-description__image">
+                                 <a href="/catalog/borba_s_sedinoy/antisilverin_s_ekstraktom_krapivy_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/"><img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/73d/70_70_1/ad3xk6mtoo45qkjhh2wjjp598n2sxibr.jpg?16548275036463" alt="Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос"></a>
+                              </div>
+                              <p class="basket-description__text">
+                                 <a href="/catalog/borba_s_sedinoy/antisilverin_s_ekstraktom_krapivy_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/">Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос</a>
+                              </p>
+                           </div>
+                           <div class="quantity">
+                              <span class="span-quantity">
+                              х3									</span>
+                           </div>
+                           <div class="price">
+                              <span class="price-text">
+                              470 руб.									</span>
+                           </div>
+                           <div class="delete" onclick="bx_basketFKauiI.removeItemFromCart(285248)" title="Удалить">
+                              <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/delete.png?1638187309261" alt="Убрать">
+                           </div>
+                        </div>
+                        <div class="basket-row">
+                           <div class="basket-description">
+                              <div class="basket-description__image">
+                                 <a href="/catalog/khity_prodazh/antisilverin_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/"><img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/703/70_70_1/zyk7784nkf0y7sz0070j2ec6boiv2un0.jpg?16548338335810" alt="Антисильверин средство для восстановления натурального цвета волос"></a>
+                              </div>
+                              <p class="basket-description__text">
+                                 <a href="/catalog/khity_prodazh/antisilverin_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/">Антисильверин средство для восстановления натурального цвета волос</a>
+                              </p>
+                           </div>
+                           <div class="quantity">
+                              <span class="span-quantity">
+                              х1									</span>
+                           </div>
+                           <div class="price">
+                              <span class="price-text">
+                              470 руб.									</span>
+                           </div>
+                           <div class="delete" onclick="bx_basketFKauiI.removeItemFromCart(290328)" title="Удалить">
+                              <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/delete.png?1638187309261" alt="Убрать">
+                           </div>
+                        </div>
+                        <div class="basket-row">
+                           <div class="basket-description">
+                              <div class="basket-description__image">
+                                 <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/73d/70_70_1/ad3xk6mtoo45qkjhh2wjjp598n2sxibr.jpg?16548275036463" alt="Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос (ПОДАРОК)">
+                              </div>
+                              <p class="basket-description__text">
+                                 Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос (ПОДАРОК)																	
+                              </p>
+                           </div>
+                           <div class="quantity">
+                              <span class="span-quantity">
+                              х1									</span>
+                           </div>
+                           <div class="price">
+                              <span class="price-text">
+                              1 руб.									</span>
+                           </div>
+                           <div class="delete" onclick="bx_basketFKauiI.removeItemFromCart(290467)" title="Удалить">
+                              <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/delete.png?1638187309261" alt="Убрать">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="total">
+                     <div class="total-top">
+                        <p class="result">
+                           Итого
+                        </p>
+                        <p class="total-summ">
+                           1 881 руб.				
+                        </p>
+                     </div>
+                     <div class="btns-flex">
+                        <a href="/personal/cart/" class="order" style="color: #FFF;">
+                        Оформить заказ
+                        </a>
+                        <button class="btn-clear order" type="button" onclick="bx_basketFKauiI.removeItemFromCart(285248);bx_basketFKauiI.removeItemFromCart(290328);bx_basketFKauiI.removeItemFromCart(290467);">
+                        Очистить корзину
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+           
+            <!--'end_frame_cache_bx_basketFKauiI'-->
+         </div>
+         <div class="contact-block-top">
+            <div class="phone">8-800-2000-950</div>
+            с 4:00 до 12:30 (по МСК, будние дни)<br>
+            <a class="top-email-link" href="mailto:market@dvelinii.ru"><img src="//1806152.ssl.1c-bitrix-cdn.ru/images/email-envelope.png?1630592678494"><u>market@dvelinii.ru</u></a><br>
+            (приём заказов в выходные дни)
+            <div class="social-icons">
+               <a class="vk-icon" target="_blank" href="https://vk.com/kosmetikaltay"></a>
+               <a class="yt-icon" target="_blank" href="https://www.youtube.com/channel/UC1ojRazgAI9ek6xkZw5r_FQ"></a>
+               <a class="ok-icon" target="_blank" href="http://ok.ru/group/52177653334155"></a>
+            </div>
+         </div>
+         <a class="logo" href="/"></a>
+      </div>
+      <div class="main-menu">
+         <div class="wrapper">
+            <a class="home-icon" href="/"></a>
+            <ul class="inner-main-menu">
+               <li><a href="/o-nas/">О нас</a></li>
+               <li><a href="/catalog/">Каталог</a></li>
+               <li><a href="/gde-kupit/">Где купить</a></li>
+               <li><a href="/kontraktnoe-proizvodstvo/">Контрактное производство</a></li>
+               <li><a href="/kontakty/">Контакты</a></li>
+               <li><a href="/optovikam/">Оптовикам</a></li>
+               <li><a href="/articles/"> Статьи</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper content cont-page">
+        <link href="//1806152.ssl.1c-bitrix-cdn.ru/bitrix/css/main/font-awesome.css?150166543628777" type="text/css" rel="stylesheet">
+        <div class="bx-breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                
+                <a href="/" title="Главная страница" itemprop="item">
+                    <span itemprop="name">Главная страница</span>
+                </a>
+                <meta itemprop="position" content="1">
+            </div>
+            <div class="bx-breadcrumb-item" id="bx_breadcrumb_1" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <i class="fa fa-angle-right"></i>
+                <a href="/catalog/" title="Каталог" itemprop="item">
+                    <span itemprop="name">Каталог</span>
+                </a>
+                <meta itemprop="position" content="2">
+            </div>
+            <div class="bx-breadcrumb-item" id="bx_breadcrumb_2" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <i class="fa fa-angle-right"></i>
+                <a href="/catalog/katalog/" title="Каталог" itemprop="item">
+                    <span itemprop="name">Каталог</span>
+                </a>
+                <meta itemprop="position" content="3">
+            </div>
+            <div class="bx-breadcrumb-item" id="bx_breadcrumb_3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <i class="fa fa-angle-right"></i>
+                <a href="/catalog/zdorovoe_pitanie/" title="Здоровое питание" itemprop="item">
+                    <span itemprop="name">Здоровое питание</span>
+                </a>
+                <meta itemprop="position" content="4">
+            </div>
+            <div class="bx-breadcrumb-item">
+                <i class="fa fa-angle-right"></i>
+                <span>Масло кедрового ореха</span>
+            </div> 
+            <div style="clear:both">
+            </div>
+         </div>
+         <div class="item-detail" id="bx_117848907_567">
+            <div class="img_container" style="float:left;width: 380px;text-align: center;">
+               <div class="images" id="main-image">
+                  <a href="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ff/1900_1200_140cd750bba9870f18aada2478b24840a/5zg6j0i4bhounco9s3ddurhysu45vkz6.jpg?1648243761928322" class="cboxElement"><img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ff/378_418_140cd750bba9870f18aada2478b24840a/5zg6j0i4bhounco9s3ddurhysu45vkz6.jpg?1648243761120688" alt="картинка Масло кедрового ореха от компании «Две Линии»" title="картинка Масло кедрового ореха компании «Две Линии»" id="bigImg"></a>
+               </div>
+               <div class="smalls_thumbs">
+                  <div class="main-its" style="display: inline-block;margin: 5px;border: 1px solid #dde7e9;">
+                     <a class="gallery-image" href="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/1ff/5zg6j0i4bhounco9s3ddurhysu45vkz6.jpg?16481931113675677">
+                        <img style="max-width: 60px; max-height: 60px;" src="/upload/resize_cache/iblock/1ff/60_60_140cd750bba9870f18aada2478b24840a/5zg6j0i4bhounco9s3ddurhysu45vkz6.jpg?>">
+                     </a>
+                  </div>
+                  <div class="its" style="display: inline-block;margin: 5px;border: 1px solid #dde7e9;">
+                     <a href="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/efa/1900_1200_1/tqu86sq6mo380a3q8edqekm3mylbx510.jpg?16482437621718832" class="cboxElement">
+                        <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/efa/60_60_2/tqu86sq6mo380a3q8edqekm3mylbx510.jpg?16482437626767">
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="title-and-price" style="margin-left: 15px;">
+               <h1>Масло кедрового ореха</h1>
+               <div class="preview-text">
+                  <p>
+                     Масло, приготовленное из отборных ядер кедрового ореха методом холодного отжима, знаменито своими полезными свойствами благодаря высокому содержанию витаминов и микроэлементов.
+                  </p>
+                  <p>Объем: 100 мл </p>
+               </div>
+               <div class="shoping-cart-and-price">
+                  <div class="hidden-pic">
+                     <img id="bx_117848907_567_pict" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/efa/tqu86sq6mo380a3q8edqekm3mylbx510.jpg?16481931114690818" alt="картинка Масло кедрового ореха от компании «Две Линии»" title="картинка Масло кедрового ореха компании «Две Линии»">
+                  </div>
+                  <div class="item_price">
+                     <span class="price-name">Цена</span>
+                     <div class="item_current_price" id="bx_117848907_567_price">
+                        933 руб.
+                     </div>
+                     <div class="rub">
+                        руб.
+                     </div>
+                  </div>
+                  <div class="item_info_section">
+                        <div class="in-stock-on">
+                           в наличии
+                        </div>
+                        <div class="item_buttons vam"><div class="modal-b-w-big">Добавлен</div>
+                           <div class="on768Flex">
+                              <span class="item_buttons_counter_block shtuk">
+                                 <div class="minus-dis" style="z-index: 6;"></div>
+                                 <a href="javascript:void(0)" class="bx_bt_button_type_2 bx_small minus-icon bx_fwb" id="bx_117848907_567_quant_down">-</a>
+                                 <input id="bx_117848907_567_quantity" type="text" class="tac transparent_input" value="1">
+                                 <a href="javascript:void(0)" class="bx_bt_button_type_2 bx_small plus-icon bx_fwb" id="bx_117848907_567_quant_up">+</a>
+                              </span>
+                              <span class="item_buttons_counter_block" id="bx_117848907_567_basket_actions" >
+                                 <a href="javascript:void(0);" class="bx_big bx_bt_button bx_cart" id="bx_117848907_567_add_basket_link"><span></span>В корзину</a>
+                              </span>
+                           </div>
+                           
+                           <span id="bx_117848907_567_not_avail" class="bx_notavailable" style="display: none;">Нет в наличии</span>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <ul class="tabs-headers">
+               <li class="tab-description active">Описание</li>
+               <li class="tab-certificate">Сертификат</li>
+               <li class="tab-otzivy">Отзывы</li>
+            </ul>
+            <ul class="tabs-content">
+               <li class="content-description active">
+                  <p>
+                     Наше масло сохраняет всю пользу цельных кедровых орехов, поэтому оно прекрасно усваивается, положительно воздействуя на многие системы организма. Кедровое масло содержит в 5 раз больше витамина Е, чем оливковое масло, нормализует гормональный фон и репродуктивные функции, а во время беременности обеспечивает защиту растущему плоду от негативного воздействия окружающей среды. Также в нашем масле много витамина Р, который способствует снижению холестерина в крови, очищает артерии и стенки сосудов от бляшек, участвуя в профилактике инфарктов и инсультов. Полезно кедровое масло и для детей, так как его регулярное употребление помогает правильному развитию растущего организма, способствует повышению умственной и физической активности.&nbsp; &nbsp;
+                  </p>
+                  <br>
+               </li>
+               <li class="content-otzivy"> 
+                  <div class="burlakastudio_realcommenter" data-talk-id="1" data-talk-url="/catalog/alteya/maslo_kedrovoe_100_ml/" data-talk-hash="5ef6a" id="itape">
+                     <header class="br_head">
+                        <h2>
+                           Отзывы о товаре
+                        </h2>
+                     </header>
+                     <div class="br_tree" id="itape_1"></div>
+                     <div class="br_comment">   
+                        <div class="brn_add" data-new-comment="bottom">
+                           <div class="brna_form _ambushed" data-zero="bottom" data-inited="1">
+                              <div class="brf_header"></div>
+                              <div class="brf_body">
+                                 <div class="brfb_msg">
+                                       <textarea autocomplete="off"></textarea>
+                                       <em>Написать</em>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="br_node"></div>
+                     </div>
+                     <input type="hidden" data-outside-var="a:2:{s:10:&quot;STATIC_URL&quot;;s:38:&quot;/catalog/alteya/maslo_kedrovoe_100_ml/&quot;;s:4:&quot;HASH&quot;;s:32:&quot;a5f536c5daf683b5b37f59e83763c80f&quot;;}" value="">
+                  </div>
+               </li>
+               <li class="content-certificate">
+                  <a class="cert-img cboxElement" href="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a53/1900_1200_140cd750bba9870f18aada2478b24840a/g2j7osddox4s2q3l2a5zo9xtq3cbgbmq.jpg?16197605191575090">
+                     <img class="certificate-img" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a53/380_900_140cd750bba9870f18aada2478b24840a/g2j7osddox4s2q3l2a5zo9xtq3cbgbmq.jpg?161976051890716">
+                  </a>
+               </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+        var obbx_117848907_567 = new JCCatalogElement({'CONFIG':{'USE_CATALOG':true,'SHOW_QUANTITY':true,'SHOW_PRICE':true,'SHOW_DISCOUNT_PERCENT':false,'SHOW_OLD_PRICE':false,'DISPLAY_COMPARE':false,'MAIN_PICTURE_MODE':'IMG','SHOW_BASIS_PRICE':false,'ADD_TO_BASKET_ACTION':['ADD'],'SHOW_CLOSE_POPUP':true,'USE_STICKERS':true},'VISUAL':{'ID':'bx_117848907_567'},'PRODUCT_TYPE':'1','PRODUCT':{'ID':'567','PICT':'','NAME':'Масло кедрового ореха','SUBSCRIPTION':true,'PRICE':{'PRICE_ID':'1','ID':'807','CAN_ACCESS':'Y','CAN_BUY':'Y','MIN_PRICE':'Y','CURRENCY':'RUB','VALUE_VAT':'933','VALUE_NOVAT':'933','DISCOUNT_VALUE_VAT':'933','DISCOUNT_VALUE_NOVAT':'933','ROUND_VALUE_VAT':'933','ROUND_VALUE_NOVAT':'933','VALUE':'933','UNROUND_DISCOUNT_VALUE':'933','DISCOUNT_VALUE':'933','DISCOUNT_DIFF':'0','DISCOUNT_DIFF_PERCENT':'0','VATRATE_VALUE':'0','DISCOUNT_VATRATE_VALUE':'0','ROUND_VATRATE_VALUE':'0','PRINT_VALUE_NOVAT':'933 руб.','PRINT_VALUE_VAT':'933 руб.','PRINT_VATRATE_VALUE':'0 руб.','PRINT_DISCOUNT_VALUE_NOVAT':'933 руб.','PRINT_DISCOUNT_VALUE_VAT':'933 руб.','PRINT_DISCOUNT_VATRATE_VALUE':'0 руб.','PRINT_VALUE':'933 руб.','PRINT_DISCOUNT_VALUE':'933 руб.','PRINT_DISCOUNT_DIFF':'0 руб.'},'BASIS_PRICE':{'PRICE_ID':'1','ID':'807','CAN_ACCESS':'Y','CAN_BUY':'Y','MIN_PRICE':'Y','CURRENCY':'RUB','VALUE_VAT':'933','VALUE_NOVAT':'933','DISCOUNT_VALUE_VAT':'933','DISCOUNT_VALUE_NOVAT':'933','ROUND_VALUE_VAT':'933','ROUND_VALUE_NOVAT':'933','VALUE':'933','UNROUND_DISCOUNT_VALUE':'933','DISCOUNT_VALUE':'933','DISCOUNT_DIFF':'0','DISCOUNT_DIFF_PERCENT':'0','VATRATE_VALUE':'0','DISCOUNT_VATRATE_VALUE':'0','ROUND_VATRATE_VALUE':'0','PRINT_VALUE_NOVAT':'933 руб.','PRINT_VALUE_VAT':'933 руб.','PRINT_VATRATE_VALUE':'0 руб.','PRINT_DISCOUNT_VALUE_NOVAT':'933 руб.','PRINT_DISCOUNT_VALUE_VAT':'933 руб.','PRINT_DISCOUNT_VATRATE_VALUE':'0 руб.','PRINT_VALUE':'933 руб.','PRINT_DISCOUNT_VALUE':'933 руб.','PRINT_DISCOUNT_DIFF':'0 руб.'},'SLIDER_COUNT':'1','SLIDER':[{'ID':'4589','TIMESTAMP_X':'25.03.2022 10:25:11','MODULE_ID':'iblock','HEIGHT':'3000','WIDTH':'3000','FILE_SIZE':'4690818','CONTENT_TYPE':'image/jpeg','SUBDIR':'iblock/efa','FILE_NAME':'tqu86sq6mo380a3q8edqekm3mylbx510.jpg','ORIGINAL_NAME':'Масло_КЕДР 100 оборот.jpg','DESCRIPTION':'','HANDLER_ID':'','EXTERNAL_ID':'c3ef5be28c696186fe53ba560fd1bec4','SRC':'//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/efa/tqu86sq6mo380a3q8edqekm3mylbx510.jpg?16481931114690818'}],'CAN_BUY':true,'CHECK_QUANTITY':false,'QUANTITY_FLOAT':false,'MAX_QUANTITY':'3','STEP_QUANTITY':'1'},'BASKET':{'ADD_PROPS':false,'QUANTITY':'quantity','PROPS':'prop','EMPTY_PROPS':'','BASKET_URL':'/personal/cart/','ADD_URL_TEMPLATE':'/catalog/zdorovoe_pitanie/maslo_kedrovoe_100_ml/?action=ADD2BASKET&id=#ID#','BUY_URL_TEMPLATE':'/catalog/zdorovoe_pitanie/maslo_kedrovoe_100_ml/?action=BUY&id=#ID#'}});
+        BX.message({
+            ECONOMY_INFO_MESSAGE: '(Экономия в цене - #ECONOMY#)',
+            BASIS_PRICE_MESSAGE: 'Цена #PRICE# за 1 #MEASURE#',
+            TITLE_ERROR: 'Ошибка',
+            TITLE_BASKET_PROPS: 'Свойства товара, добавляемые в корзину',
+            BASKET_UNKNOWN_ERROR: 'Неизвестная ошибка при добавлении товара в корзину',
+            BTN_SEND_PROPS: 'Выбрать',
+            BTN_MESSAGE_BASKET_REDIRECT: 'Перейти в корзину',
+            BTN_MESSAGE_CLOSE: 'Закрыть',
+            BTN_MESSAGE_CLOSE_POPUP: 'Продолжить покупки',
+            TITLE_SUCCESSFUL: 'Товар добавлен в корзину',
+            COMPARE_MESSAGE_OK: 'Товар добавлен в список сравнения',
+            COMPARE_UNKNOWN_ERROR: 'При добавлении товара в список сравнения произошла ошибка',
+            COMPARE_TITLE: 'Сравнение товаров',
+            BTN_MESSAGE_COMPARE_REDIRECT: 'Перейти в список сравнения',
+            PRODUCT_GIFT_LABEL: 'Подарок',
+            SITE_ID: 's1'
+        });
+        </script>
+        <script type="text/javascript">
+                BX.Currency.setCurrencies([{'CURRENCY':'RUB','FORMAT':{'FORMAT_STRING':'# руб.','DEC_POINT':'','THOUSANDS_SEP':' ','DECIMALS':0,'THOUSANDS_VARIANT':'S','HIDE_ZERO':'Y'}}]);
+         </script>
+        <script type="text/javascript">
+        BX.ready(BX.defer(function(){
+            if (!!window.obbx_117848907_567)
+            {
+                window.obbx_117848907_567.allowViewedCount(true);
+            }
+        }));
+        </script>
+         <div class="slick-page bx_item_list_recommended col3 bx_green">
+            <div class="slick-inner">
+               <h2 class="center">
+                  с этим товаром покупают
+               </h2>
+               <div class="slick-slider2 itemCard ">
+                  <div class="slick-item isRelative">
+                     <a href="/catalog/zdorovoe_pitanie/kasha_kedrovaya/" class="picture" title="картинка Каша кедровая от компании «Две Линии», являющейся производителем">
+                        <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/325/lm7gtdz87eekr0fk4i57lzrpiyj15ahx.jpg?16357561442970489">
+                     </a>
+                     <a class="title" href="/catalog/zdorovoe_pitanie/kasha_kedrovaya/" title="Каша кедровая">
+                        Каша кедровая
+                     </a>
+                     <div class="value">
+                        Объём: 200 г (5x40 г)
+                     </div>
+                     <div class="isFlex flexCenter isAbsolute">
+                        <div class="price">
+                           431 руб.
+                        </div>
+                        <a id="bx_2401621108_547_buy_link" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow">Купить</a>
+                     </div>
+                  </div>
+                  <div class="slick-item isRelative">
+                     <a class="picture" href="/catalog/zdorovoe_pitanie/travyanoy_chay_gornyy/">
+                     <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/89a/05l0iqao52lcopqvx719836qpm4pax63.jpg?16358393651850461">
+                     </a>
+                     <a class="title" href="/catalog/zdorovoe_pitanie/travyanoy_chay_gornyy/">Травяной чай "Горный"</a>
+                     <div class="value">Объём: 80 г</div>
+                     <div class="isFlex flexCenter isAbsolute">
+                        <div class="price">
+                           207 руб.
+                        </div>
+                        <a id="bx_2401621108_547_buy_link" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow">Купить</a>
+                     </div>
+                     
+                  </div>
+                  <div class="slick-item isRelative">
+                     <a class="picture" href="/catalog/zdorovoe_pitanie/fitochay_zelyenyy_kofe_imbir_25_filtr_paketov_po_1_2_g/">
+                     <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/cd9/2pqctrw7cm16qp8gixeswus8eb1uczqz.jpg?16358383942221932">
+                     </a>
+                     <a class="title" href="/catalog/zdorovoe_pitanie/fitochay_zelyenyy_kofe_imbir_25_filtr_paketov_po_1_2_g/">Фиточай "Зелёный кофе &amp; Имбирь"</a>
+                     <div class="value">Объём: 25 фильтр-пакетов по 1,2 г</div>
+                     <div class="isFlex flexCenter isAbsolute">
+                        <div class="price">
+                           187 руб.
+                        </div>
+                        <a id="bx_2401621108_547_buy_link" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow">Купить</a>
+                     </div>
+                     
+                  </div>
+                  <div class="slick-item isRelative">
+                     <a class="picture" href="/catalog/zdorovoe_pitanie/fitochay_ivan_chay_20_filtr_paketov_po_1_2_g">
+                     <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/a58/jjebr0w9kdy533oxgtb4exxvudf0vuex.jpg?16358369942392608">
+                     </a>
+                     <a class="title" href="/catalog/zdorovoe_pitanie/fitochay_ivan_chay_20_filtr_paketov_po_1_2_g">Фиточай "Иван-чай"</a>
+                     <div class="value">Объём: 20 фильтр-пакетов по 1,2 г</div>
+                     <div class="isFlex flexCenter isAbsolute">
+                        <div class="price">
+                           224 руб.
+                        </div>
+                        <a id="bx_2401621108_547_buy_link" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow">Купить</a>
+                     </div>
+                     
+                  </div>
+                  <div class="slick-item isRelative">
+                     <a class="picture" href="/catalog/zdorovoe_pitanie/kamennoe_maslo_s_digidrokvertsetinom_i_vitaminom_s_naturalnyy_antioksidant/">
+                     <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/720/7208b7bbaed494b24f3692f5d9b97dc2.jpg?1499435624687530">
+                     </a>
+                     <a class="title" href="/catalog/zdorovoe_pitanie/kamennoe_maslo_s_digidrokvertsetinom_i_vitaminom_s_naturalnyy_antioksidant/">Каменное масло с дигидрокверцетином и витамином С "Натуральный антиоксидант"</a>
+                     <div class="value">Объём: 30 капсул по 500 мг</div>
+                     <div class="isFlex flexCenter isAbsolute">
+                        <div class="price">
+                           576 руб.
+                        </div>
+                        <a id="bx_2401621108_547_buy_link" class="bx_bt_button bx_medium" href="javascript:void(0)" rel="nofollow">Купить</a>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div> 
+        
+            <script type="text/javascript">
+                BX.message({
+                    MESS_BTN_BUY: 'Купить',
+                    MESS_BTN_ADD_TO_BASKET: 'В корзину',
+        
+                    MESS_BTN_DETAIL: 'Подробнее',
+        
+                    MESS_NOT_AVAILABLE: 'Подробнее',
+                    BTN_MESSAGE_BASKET_REDIRECT: 'Перейти в корзину',
+                    BASKET_URL: '/personal/cart/',
+                    ADD_TO_BASKET_OK: 'Товар добавлен в корзину',
+                    TITLE_ERROR: 'Ошибка',
+                    TITLE_BASKET_PROPS: 'Свойства товара, добавляемые в корзину',
+                    TITLE_SUCCESSFUL: 'Товар добавлен в корзину',
+                    BASKET_UNKNOWN_ERROR: 'Неизвестная ошибка при добавлении товара в корзину',
+                    BTN_MESSAGE_SEND_PROPS: 'Выбрать',
+                    BTN_MESSAGE_CLOSE: 'Закрыть'
+                });
+            </script>
+        <!--'start_frame_cache_Ci2eX8'-->	<script type="text/javascript">
+                BX.message({
+                    CVP_MESS_BTN_BUY: 'Купить',
+                    CVP_MESS_BTN_ADD_TO_BASKET: 'В корзину',
+        
+                    CVP_MESS_BTN_DETAIL: 'Подробнее',
+        
+                    CVP_MESS_NOT_AVAILABLE: 'Подробнее',
+                    CVP_BTN_MESSAGE_BASKET_REDIRECT: 'Перейти в корзину',
+                    CVP_BASKET_URL: '/personal/basket.php',
+                    CVP_ADD_TO_BASKET_OK: 'Товар добавлен в корзину',
+                    CVP_TITLE_ERROR: 'Ошибка',
+                    CVP_TITLE_BASKET_PROPS: 'Свойства товара, добавляемые в корзину',
+                    CVP_TITLE_SUCCESSFUL: 'Товар добавлен в корзину',
+                    CVP_BASKET_UNKNOWN_ERROR: 'Неизвестная ошибка при добавлении товара в корзину',
+                    CVP_BTN_MESSAGE_SEND_PROPS: 'Выбрать',
+                    CVP_BTN_MESSAGE_CLOSE: 'Закрыть'
+                });
+            </script>
+            <div class="slick-page bx_item_list_recommended col3 bx_green">
+               <div class="slick-inner">
+                  <h2 class="center">
+                     недавно просмотренные
+                  </h2>
+                  <div class="slick-slider2 itemCard">
+                     <div class="slick-item">
+                        <a href="/catalog/zdorovoe_pitanie/kasha_kedrovaya/" class="picture" title="картинка Каша кедровая от компании «Две Линии», являющейся производителем">
+                           <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/325/lm7gtdz87eekr0fk4i57lzrpiyj15ahx.jpg?16357561442970489">
+                        </a>
+                        <a class="title" href="/catalog/zdorovoe_pitanie/kasha_kedrovaya/" title="Каша кедровая">
+                           Каша кедровая
+                        </a>
+                        <div class="value">
+                           Объём: 200 г (5x40 г)
+                        </div>
+                        <div class="price">
+                           431 руб.
+                        </div>
+                        
+                     </div>
+                     <div class="slick-item">
+                        <a class="picture" href="/catalog/zdorovoe_pitanie/travyanoy_chay_gornyy/">
+                        <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/89a/05l0iqao52lcopqvx719836qpm4pax63.jpg?16358393651850461">
+                        </a>
+                        <a class="title" href="/catalog/zdorovoe_pitanie/travyanoy_chay_gornyy/">Травяной чай "Горный"</a>
+                        <div class="value">Объём: 80 г</div>
+                        <div class="price">
+                           207 руб.
+                        </div>
+                     </div>
+                     <div class="slick-item">
+                        <a class="picture" href="/catalog/zdorovoe_pitanie/fitochay_zelyenyy_kofe_imbir_25_filtr_paketov_po_1_2_g/">
+                        <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/cd9/2pqctrw7cm16qp8gixeswus8eb1uczqz.jpg?16358383942221932">
+                        </a>
+                        <a class="title" href="/catalog/zdorovoe_pitanie/fitochay_zelyenyy_kofe_imbir_25_filtr_paketov_po_1_2_g/">Фиточай "Зелёный кофе &amp; Имбирь"</a>
+                        <div class="value">Объём: 25 фильтр-пакетов по 1,2 г</div>
+                        <div class="price">
+                           187 руб.
+                        </div>
+                     </div>
+                     <div class="slick-item">
+                        <a class="picture" href="/catalog/zdorovoe_pitanie/fitochay_ivan_chay_20_filtr_paketov_po_1_2_g">
+                        <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/a58/jjebr0w9kdy533oxgtb4exxvudf0vuex.jpg?16358369942392608">
+                        </a>
+                        <a class="title" href="/catalog/zdorovoe_pitanie/fitochay_ivan_chay_20_filtr_paketov_po_1_2_g">Фиточай "Иван-чай"</a>
+                        <div class="value">Объём: 20 фильтр-пакетов по 1,2 г</div>
+                        <div class="price">
+                           224 руб.
+                        </div>
+                     </div>
+                     <div class="slick-item">
+                        <a class="picture" href="/catalog/zdorovoe_pitanie/kamennoe_maslo_s_digidrokvertsetinom_i_vitaminom_s_naturalnyy_antioksidant/">
+                        <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/720/7208b7bbaed494b24f3692f5d9b97dc2.jpg?1499435624687530">
+                        </a>
+                        <a class="title" href="/catalog/zdorovoe_pitanie/kamennoe_maslo_s_digidrokvertsetinom_i_vitaminom_s_naturalnyy_antioksidant/">Каменное масло с дигидрокверцетином и витамином С "Натуральный антиоксидант"</a>
+                        <div class="value">Объём: 30 капсул по 500 мг</div>
+                        <div class="price">
+                           576 руб.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> 
+        <!--'end_frame_cache_Ci2eX8'-->	</div>
+      <div class="wrapper content cont-page">
+         <!-- <button onclick="samByOneClick.open(event);" >test</button> -->
+         <!-- icons -->
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+         <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </div>
+      <div class="main-menu">
+         <div class="wrapper">
+            <a class="home-icon" href="/"></a>
+            <ul class="inner-main-menu">
+               <li><a href="/o-nas/">О нас</a></li>
+               <li><a href="/catalog/">Каталог</a></li>
+               <li><a href="/gde-kupit/">Где купить</a></li>
+               <li><a href="/kontraktnoe-proizvodstvo/">Контрактное производство</a></li>
+               <li><a href="/kontakty/">Контакты</a></li>
+               <li><a href="/optovikam/">Оптовикам</a></li>
+               <li><a href="/articles/"> Статьи</a></li>
+            </ul>
+         </div>
+      </div>
+      <footer>
+         <div id="cookie-modal" class="cookies cookie-notification-modal">
+            <p class="cookies-text">
+               Для повышения Вашего удобства этот сайт использует cookie для хранения данных. Продолжая использовать сайт, Вы даете своё согласие на работу с этими файлами.		
+            </p>
+            <button class="btn-cookie js-coockie-agree" type="button">
+            Хорошо, принимаю
+            </button>
+         </div>
+         <div class="wrapper">
+            <div class="contact-and-subscribe">
+               <div class="p-soc">
+                  <div class="phone">8-800-2000-950</div>
+                  Звонок по России бесплатный
+                  <div class="social-icons">
+                     <a class="vk-icon" target="_blank" href="https://vk.com/kosmetikaltay"></a>
+                     <a class="yt-icon" target="_blank" href="https://www.youtube.com/channel/UC1ojRazgAI9ek6xkZw5r_FQ"></a>
+                     <a class="ok-icon" target="_blank" href="http://ok.ru/group/52177653334155"></a>
+                  </div>
+               </div>
+               <div class="mail"><a href="mailto:market@dvelinii.ru">market@dvelinii.ru</a></div>
+               <div class="bx-subscribe" id="sender-subscribe">
+                  <div class="title">Подписка на новостную рассылку</div>
+                  <!--'start_frame_cache_sender-subscribe'-->	
+                  <form role="form" method="post" action="/" onsubmit="BX('bx_subscribe_btn_sljzMT').disabled=true;">
+                     <input type="hidden" name="sessid" id="sessid" value="7528bf0eff87737edd694f83a34d900f">		<input type="hidden" name="sender_subscription" value="add">
+                     <div class="bx-input-group">
+                        <input class="bx-form-control" type="email" name="SENDER_SUBSCRIBE_EMAIL" value="" title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
+                     </div>
+                     <div class="bx_subscribe_submit_container">
+                        <button class="sender-btn btn-subscribe" id="bx_subscribe_btn_sljzMT"><span>Подписаться</span></button>
+                     </div>
+                  </form>
+                  <!--'end_frame_cache_sender-subscribe'-->
+               </div>
+            </div>
+            <div class="footer-menu">
+               <h3>Компания</h3>
+               <ul class="left-menu">
+                  <li><a href="/o-nas/">О нас</a></li>
+                  <li><a href="/kontraktnoe-proizvodstvo/">Контрактное производство</a></li>
+                  <li><a href="/kontakty/">Контакты</a></li>
+               </ul>
+               <!--<a class="cr" href="http://svi-ter.ru/" target="_blank">Разработка сайта: студия «Свитер»</a> -->
+            </div>
+            <div class="footer-menu">
+               <h3>Магазин</h3>
+               <ul class="left-menu">
+                  <li><a href="/catalog/">Каталог</a></li>
+                  <li><a href="/o-dostavke/">Доставка и оплата</a></li>
+                  <li><a href="/polzovatelskoe-soglashenie/" target="_blank">Пользовательское соглашение</a></li>
+               </ul>
+               <img class="cards-icon" src="//1806152.ssl.1c-bitrix-cdn.ru/images/cards.jpg?14994355975916">
+            </div>
+         </div>
+         <script>
+            $('.sandwich').click(function(){
+                $('body').toggleClass('openedMob-menu');
+            });
+            
+            function checkNalojenniyPlatej(){
+                let naloj = 0;
+                $(document).on('each', '.bx-soa-cart-total-line', function(){
+                    if($(this).find('.bx-soa-cart-t').html() == 'Дополнительно наложенный платеж:'){
+                        $(this).addClass('naloj_platej_val');
+                        naloj = parseFloat($(this).find('.bx-soa-cart-d').html().replace('~', '').replace(' руб.', ''));
+                    }
+                });
+                console.log(naloj);
+            }
+            
+            $(document).ajaxComplete(function(){
+                // checkNalojenniyPlatej();
+            });
+            $('.bx-soa-cart-total').bind("DOMSubtreeModified",function(){
+                // checkNalojenniyPlatej();
+            });
+         </script>
+         <style type="text/css">
+            /*artner block*/
+            .block_part_title{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            }
+            .partners_block{
+            margin-bottom: 50px;
+            }
+            .dflex{
+            display: flex;
+            flex-wrap: wrap;
+            }
+            .item_partner{
+            width: 20%;
+            padding: 20px; 
+            }
+            .item_partner a,
+            .item_partner img{
+            display: block;
+            width: 100%; 
+            }
+            .partners_wrapper{
+            align-items: center;
+            justify-content: center;
+            }
+            .alert-danger {
+            color: #a9F442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            text-align: center;
+            }
+            .alert {
+            border: 0;
+            border-radius: 1px;
+            font-size: 14px;
+            padding: 15px;
+            margin-bottom: 20px;
+            }
+            .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            }
+            .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            }
+         </style>
+         <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-80419714-3', 'auto');
+            ga('send', 'pageview');
+            
+         </script>
+         <!-- Yandex.Metrika counter -->
+         <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+            ym(36982350, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript>
+            <div><img src="https://mc.yandex.ru/watch/36982350" style="position:absolute; left:-9999px;" alt="" /></div>
+         </noscript>
+         <!-- /Yandex.Metrika counter -->
+      </footer>

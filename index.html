@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="js/jquery.colorbox-min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/jquery.jcarousel.min.js"></script>
+      <script src="js/jcarousel.js"></script>
+      <link rel="stylesheet" href="template_styles.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/colorbox.css">
+      <link rel="stylesheet" href="css/vm_styles.css">
+      <link rel="stylesheet" href="css/comment.css">
+      <link rel="stylesheet" href="css/popupBacket/main.css">
+      <link rel="stylesheet" href="css/popupBacket/reset.css">
+      <script src="https://unpkg.com/imask"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+      <link rel="stylesheet" href="./css/slick.css">
+      <meta name="yandex-verification" content="e41b316c30defb55"/>
+      <style>
+         .b-and-t {
+         display: none;
+         }
+      </style>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26468814-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-26468814-1');
+      </script>
+   </head>
+   <body>
+      <!-- Rating Mail.ru counter -->
+      <script type="text/javascript">
+         var _tmr = window._tmr || (window._tmr = []);
+         _tmr.push({id: "3227414", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+         (function (d, w, id) {
+          if (d.getElementById(id)) return;
+          var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+          ts.src = "https://top-fwz1.mail.ru/js/code.js";
+          var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+          if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+         })(document, window, "topmailru-code");
+      </script>
+      <noscript>
+         <div>
+            <img src="https://top-fwz1.mail.ru/counter?id=32...js=na"; style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+         </div>
+      </noscript>
+      <!-- //Rating Mail.ru counter -->
+      <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+      <script type="text/javascript">
+         var _tmr = _tmr || [];
+         _tmr.push({
+            type: 'itemView',
+            productid: 'VALUE',
+            pagetype: 'VALUE',
+            list: 'VALUE',
+            totalvalue: 'VALUE'
+         });
+      </script>
+      <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+      <noscript><img height="1" width="1" style="display:none"
+         src="https://top-fwz1.mail.ru/tracker?id=3227414;e=RG%3A/trg-pixel-11667944-1632831841210;_={{random}}";
+         /></noscript>
+      <div id="ytWidget" class="hidden_lang_swithcer"></div>
+      <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false" type="text/javascript"></script>
+      <script>
+         $(document).on('click', '.js_change_lang', function(){
+         	let newLang = $(this).data('lang');
+         	$('.yt-button_type_right').trigger('click');
+         	$('#ytWidget .yt-listbox__input[value="'+newLang+'"]').parent().trigger('click');
+                $('.active_lang').removeClass('active_lang');
+                $(this).addClass('active_lang');
+                if(newLang != 'ru'){
+                 $('body').addClass('other_langs');
+                }else{
+                 $('body').removeClass('other_langs');
+                }
+         
+         	if( $(window).width() > 1000 ){
+         		if( typeof sidebar !== "undefined"){
+         			setTimeout(function(){
+         				sidebar.updateSticky();
+         console.log(sidebar);
+         			}, 1500);
+         		}
+         	}
+         
+         
+         });
+         $(document).ready(function(){
+             setTimeout(function(){
+               var selectedLang = $('#ytWidget input[type="radio"]:checked').val();
+               if(selectedLang == 'ru'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="ru"]').addClass('active_lang');
+                 $('body').removeClass('other_langs');
+               }
+               if(selectedLang == 'en'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="en"]').addClass('active_lang');
+                 $('body').addClass('other_langs');
+               }
+               if(selectedLang == 'zh'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="zh"]').addClass('active_lang');
+                 $('body').addClass('other_langs');
+               }
+               if(selectedLang == 'vi'){
+                 $('.active_lang').removeClass('active_lang');
+                 $('.js_change_lang[data-lang="vi"]').addClass('active_lang');
+                 $('body').addClass('other_langs');
+               }
+               $(window).trigger('resize');
+             }, 1000);
+         })
+      </script>
+      <script src="./js/slick.min.js"></script>
+      <script>
+         $(document).ready(function(){
+            $('.slick-slider').slick({
+               infinite: true,
+               slidesToShow: 5,
+               slidesToScroll: 5,
+               speed: 800,
+               autoplay: false,
+               autoplaySpeed: 10000,
+               responsive: [
+                        {
+                           breakpoint: 1200,
+                           settings: {
+                              slidesToShow: 4,
+                              slidesToScroll: 4,
+                           }
+                        },
+                        {
+                           breakpoint: 1024,
+                           settings: {
+                              slidesToShow: 3,
+                              slidesToScroll: 3,
+                           }
+                        },
+                        {
+                           breakpoint: 700,
+                           settings: {
+                              slidesToShow: 2,
+                              slidesToScroll: 2,
+                           }
+                        },
+                        {
+                           breakpoint: 500,
+                           settings: {
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                           }
+                        },
+                     ],
+            })
+         })
+            
+      </script>
+      <div class="sandwich">
+         <span class="line_1"></span>
+         <span class="line_2"></span>
+         <span class="line_3"></span>
+      </div>
+      <div class="top-stripe">
+         <div class="wrapper">
+            <ul class="top-menu">
+               <li><a href="/o-dostavke/">Доставка и оплата</a></li>
+            </ul>
+            <div class="lang-switcher">
+               <div class="icon"></div>
+               <a href="javascript:void(0);" data-lang="ru" class="js_change_lang active_lang">Рус</a> | <a href="javascript:void(0);" data-lang="en" class="js_change_lang">Eng</a> | <a href="javascript:void(0);" data-lang="vi" class="js_change_lang">Vie</a> | <a href="javascript:void(0);" data-lang="zh" class="js_change_lang">Che</a>
+            </div>
+            <div class="login-register">
+               <div class="lk-icon"></div>
+               <a href="/personal/profile/?login=yes">Войти</a><a href="/personal/profile/?register=yes">Зарегистрироваться</a>
+            </div>
+            <div class="top-search-form" id="title-search">
+               <form action="/search/index.php">
+                  <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Поиск по сайту">
+                  <input name="s" type="submit" class="search-icon" value="Поиск">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="wrapper w-logo">
+         <div id="bx_basketFKauiI" class="bx-basket bx-opener">
+            <!--'start_frame_cache_bx_basketFKauiI'-->
+            <a href="/personal/cart/">
+               <div class="bx-basket-block">
+                  <div class="shoping-cart-icon"></div>
+                  3 шт. / 									1 881 руб.						
+               </div>
+            </a>
+            <div data-role="basket-item-list" class="bx-basket-item-list">
+               <div class="basket-inside">
+                  <h4 class="basket-inside-title">
+                     Ваш заказ
+                  </h4>
+                  <div class="basket-wrapper">
+                     <div id="bx_basketFKauiIproducts" class="basket-wrapper">
+                        <div class="basket-row">
+                           <div class="basket-description">
+                              <div class="basket-description__image">
+                                 <a href="/catalog/borba_s_sedinoy/antisilverin_s_ekstraktom_krapivy_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/"><img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/73d/70_70_1/ad3xk6mtoo45qkjhh2wjjp598n2sxibr.jpg?16548275036463" alt="Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос"></a>
+                              </div>
+                              <p class="basket-description__text">
+                                 <a href="/catalog/borba_s_sedinoy/antisilverin_s_ekstraktom_krapivy_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/">Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос</a>
+                              </p>
+                           </div>
+                           <div class="quantity">
+                              <span class="span-quantity">
+                              х3									</span>
+                           </div>
+                           <div class="price">
+                              <span class="price-text">
+                              470 руб.									</span>
+                           </div>
+                           <div class="delete" onclick="bx_basketFKauiI.removeItemFromCart(285248)" title="Удалить">
+                              <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/delete.png?1638187309261" alt="Убрать">
+                           </div>
+                        </div>
+                        <div class="basket-row">
+                           <div class="basket-description">
+                              <div class="basket-description__image">
+                                 <a href="/catalog/khity_prodazh/antisilverin_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/"><img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/703/70_70_1/zyk7784nkf0y7sz0070j2ec6boiv2un0.jpg?16548338335810" alt="Антисильверин средство для восстановления натурального цвета волос"></a>
+                              </div>
+                              <p class="basket-description__text">
+                                 <a href="/catalog/khity_prodazh/antisilverin_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/">Антисильверин средство для восстановления натурального цвета волос</a>
+                              </p>
+                           </div>
+                           <div class="quantity">
+                              <span class="span-quantity">
+                              х1									</span>
+                           </div>
+                           <div class="price">
+                              <span class="price-text">
+                              470 руб.									</span>
+                           </div>
+                           <div class="delete" onclick="bx_basketFKauiI.removeItemFromCart(290328)" title="Удалить">
+                              <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/delete.png?1638187309261" alt="Убрать">
+                           </div>
+                        </div>
+                        <div class="basket-row">
+                           <div class="basket-description">
+                              <div class="basket-description__image">
+                                 <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/73d/70_70_1/ad3xk6mtoo45qkjhh2wjjp598n2sxibr.jpg?16548275036463" alt="Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос (ПОДАРОК)">
+                              </div>
+                              <p class="basket-description__text">
+                                 Антисильверин с экстрактом крапивы средство для восстановления натурального цвета волос (ПОДАРОК)																	
+                              </p>
+                           </div>
+                           <div class="quantity">
+                              <span class="span-quantity">
+                              х1									</span>
+                           </div>
+                           <div class="price">
+                              <span class="price-text">
+                              1 руб.									</span>
+                           </div>
+                           <div class="delete" onclick="bx_basketFKauiI.removeItemFromCart(290467)" title="Удалить">
+                              <img src="//1806152.ssl.1c-bitrix-cdn.ru/upload/delete.png?1638187309261" alt="Убрать">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="total">
+                     <div class="total-top">
+                        <p class="result">
+                           Итого
+                        </p>
+                        <p class="total-summ">
+                           1 881 руб.				
+                        </p>
+                     </div>
+                     <div class="btns-flex">
+                        <a href="/personal/cart/" class="order" style="color: #FFF;">
+                        Оформить заказ
+                        </a>
+                        <button class="btn-clear order" type="button" onclick="bx_basketFKauiI.removeItemFromCart(285248);bx_basketFKauiI.removeItemFromCart(290328);bx_basketFKauiI.removeItemFromCart(290467);">
+                        Очистить корзину
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+           
+            <!--'end_frame_cache_bx_basketFKauiI'-->
+         </div>
+         <div class="contact-block-top">
+            <div class="phone">8-800-2000-950</div>
+            с 4:00 до 12:30 (по МСК, будние дни)<br>
+            <a class="top-email-link" href="mailto:market@dvelinii.ru"><img src="//1806152.ssl.1c-bitrix-cdn.ru/images/email-envelope.png?1630592678494"><u>market@dvelinii.ru</u></a><br>
+            (приём заказов в выходные дни)
+            <div class="social-icons">
+               <a class="vk-icon" target="_blank" href="https://vk.com/kosmetikaltay"></a>
+               <a class="yt-icon" target="_blank" href="https://www.youtube.com/channel/UC1ojRazgAI9ek6xkZw5r_FQ"></a>
+               <a class="ok-icon" target="_blank" href="http://ok.ru/group/52177653334155"></a>
+            </div>
+         </div>
+         <a class="logo" href="/"></a>
+      </div>
+      <div class="main-menu">
+         <div class="wrapper">
+            <a class="home-icon" href="/"></a>
+            <ul class="inner-main-menu">
+               <li><a href="/o-nas/">О нас</a></li>
+               <li><a href="/catalog/">Каталог</a></li>
+               <li><a href="/gde-kupit/">Где купить</a></li>
+               <li><a href="/kontraktnoe-proizvodstvo/">Контрактное производство</a></li>
+               <li><a href="/kontakty/">Контакты</a></li>
+               <li><a href="/optovikam/">Оптовикам</a></li>
+               <li><a href="/articles/"> Статьи</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="slider-wrapper" style="width: 1908px;">
+         <div class="slider" data-jcarousel="true" data-jcarouselautoscroll="true" style="width: 1908px;">
+            <ul style="left: -9540px; top: 0px;">
+               <li id="bx_3218110189_1623" style="background: rgba(0, 0, 0, 0) url(&quot;//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/43f/1920_500_240cd750bba9870f18aada2478b24840a/43febb452f3f12643a00786312e4bcf8.jpg?1569302031695417&quot;) no-repeat scroll right top; width: 1908px;">
+                  <a class="link" href="http://dvelinii.com/catalog/alteya/"></a>
+               </li>
+               <li id="bx_3218110189_1629" style="background: rgba(0, 0, 0, 0) url(&quot;//1806152.ssl.1c-bitrix-cdn.ru/upload/iblock/b78/b7867ad30652afe635a37448396f8db2.jpg?1518355942840668&quot;) no-repeat scroll right top; width: 1908px;">
+                  <a class="link" href="http://www.dvelinii.com/o-nas/novosti/sokhranim_prirodu_altaya_vmeste/?clear_cache=Y"></a>
+               </li>
+               <li id="bx_3218110189_8200" style="background: rgba(0, 0, 0, 0) url(&quot;//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/7be/1920_500_240cd750bba9870f18aada2478b24840a/vid3v2i4p22lxv2tjrqbniouremkzti6.jpg?1655845224972934&quot;) no-repeat scroll right top; width: 1908px;">
+                  <a class="link" href="https://dvelinii.com/catalog/"></a>
+               </li>
+               <li id="bx_3218110189_7974" style="background: rgba(0, 0, 0, 0) url(&quot;//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/7c1/1920_500_240cd750bba9870f18aada2478b24840a/pmxxu0d67l2eoyu4xz1f078u2cbc5ret.jpg?1648786431726808&quot;) no-repeat scroll right top; width: 1908px;">
+                  <a class="link" href="https://dvelinii.com/o-dostavke/"></a>
+               </li>
+               <li id="bx_3218110189_8030" style="background: rgba(0, 0, 0, 0) url(&quot;//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1e3/1920_500_240cd750bba9870f18aada2478b24840a/1e38a42ae358673a32057cfec7cd6192.jpg?1605677060820762&quot;) no-repeat scroll right top; width: 1908px;">
+               </li>
+               <li id="bx_3218110189_1627" style="background: rgba(0, 0, 0, 0) url(&quot;//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/280/1920_500_240cd750bba9870f18aada2478b24840a/2807e5e08fc625d89c5b27aad880b8ec.jpg?1569302203439666&quot;) no-repeat scroll right top; width: 1908px;">
+                  <a class="link" href="http://dvelinii.com/o-nas/"></a>
+               </li>
+            </ul>
+         </div>
+         <div class="wrapper">
+            <p class="slider-pagination" data-jcarouselpagination="true"><a href="#1" class="">1</a><a href="#2" class="">2</a><a href="#3" class="">3</a><a href="#4" class="active">4</a><a href="#5" class="">5</a><a href="#6" class="">6</a></p>
+         </div>
+      </div>
+      <div class="slick-page">
+         <div class="slick-inner">
+            <h2 class="center">
+               Новинки
+            </h2>
+            <div class="slick-slider">
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_gretskogo_orekha_legendarnoe_sibirskoe/">
+                     <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/6fc/210_210_240cd750bba9870f18aada2478b24840a/70h7nyf328hocnotaamov8oldghvt05s.jpg?165418470123257">
+                  </a>
+                  
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_gretskogo_orekha_legendarnoe_sibirskoe/">МАСЛО ГРЕЦКОГО ОРЕХА «ЛЕГЕНДАРНОЕ СИБИРСКОЕ»</a>
+                     <div class="value">Объём: 250 мл</div>
+                     <div class="hit-new__price-block">
+                        <div class="hit-new__old-price">
+                           615 руб
+                        </div>
+                        <div class="dicount-sticker">-10%</div>
+                        <div class="hit-new__new-price">
+                           470 руб.
+                        </div>
+                     </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_oblepikhovoe_legendarnoe_sibirskoe/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/8d5/210_210_240cd750bba9870f18aada2478b24840a/h92gdm8j5rch0aegg3d2mlhl7bvw224n.jpg?165418470323713">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_oblepikhovoe_legendarnoe_sibirskoe/">МАСЛО ОБЛЕПИХОВОЕ «ЛЕГЕНДАРНОЕ СИБИРСКОЕ»</a>
+                  <div class="value">Объём: 250 мл</div>
+                  <div class="price">
+                     1058 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_kedrovoe_legendarnoe_sibirskoe/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a54/210_210_240cd750bba9870f18aada2478b24840a/h1sphz8ml68rqvn6pgb1dx4jpv514zm1.jpg?165418470323205">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_kedrovoe_legendarnoe_sibirskoe/">МАСЛО КЕДРОВОЕ «ЛЕГЕНДАРНОЕ СИБИРСКОЕ»</a>
+                  <div class="value">Объём: 250 мл</div>
+                  <div class="price">
+                     2341 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_kunzhutnoe_legendarnoe_sibirskoe/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/fb2/210_210_240cd750bba9870f18aada2478b24840a/yjfvlmgh8yjpv988ynnevaps9krqh9wt.jpg?165418490323310">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_kunzhutnoe_legendarnoe_sibirskoe/">МАСЛО КУНЖУТНОЕ «ЛЕГЕНДАРНОЕ СИБИРСКОЕ»</a>
+                  <div class="value">Объём: 250 мл</div>
+                  <div class="price">
+                     1021 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_tykvennoe_legendarnoe_sibirskoe/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/5eb/210_210_240cd750bba9870f18aada2478b24840a/j2o44on5ty361ky3zkof6y3yub9uiuev.jpg?165418498323685">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_tykvennoe_legendarnoe_sibirskoe/">Масло тыквенное «Легендарное Сибирское»</a>
+                  <div class="value">Объём: 250 мл</div>
+                  <div class="price">
+                     1212 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/ukhod_za_litsom/planet_spa_altai_gel_aloe_vera_dlya_litsa_i_tela/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/2a2/210_210_240cd750bba9870f18aada2478b24840a/w2n760gbq0gdnqjdwk17lmmbgi9aymuu.jpg?165421348029187">
+                  </a>
+                  <a class="title" href="/catalog/ukhod_za_litsom/planet_spa_altai_gel_aloe_vera_dlya_litsa_i_tela/">Planet SPA Altai Гель Алоэ вера для лица и тела</a>
+                  <div class="value">Объём: 250 мл</div>
+                  <div class="price">
+                     385 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/ukhod_za_litsom/planet_spa_altai_penka_dlya_umyvaniya_ochishchenie_i_ukhod/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/444/210_210_240cd750bba9870f18aada2478b24840a/arjicp2dt7e1yt55nq3euczbeqajagur.jpg?165421495719671">
+                  </a>
+                  <a class="title" href="/catalog/ukhod_za_litsom/planet_spa_altai_penka_dlya_umyvaniya_ochishchenie_i_ukhod/">Planet SPA Altai Пенка для умывания «Очищение и уход»</a>
+                  <div class="value">Объём: 160 мл</div>
+                  <div class="price">
+                     488 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/ukhod_za_telom/planet_spa_altai_nezhnyy_muss_dlya_intimnoy_gigieny/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/707/210_210_240cd750bba9870f18aada2478b24840a/j184vix53fxpecvyacs6f5tu573anhzp.jpg?165421547216483">
+                  </a>
+                  <a class="title" href="/catalog/ukhod_za_telom/planet_spa_altai_nezhnyy_muss_dlya_intimnoy_gigieny/">Planet SPA Altai Нежный мусс для интимной гигиены</a>
+                  <div class="value">Объём: 160 мл</div>
+                  <div class="price">
+                     515 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_amarantovoe/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/6e8/210_210_240cd750bba9870f18aada2478b24840a/69b5mfocq9zj4c3mzf1v9ehmns1b5d7d.jpg?165421547346249">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_amarantovoe/">Масло амарантовое</a>
+                  <div class="value">Объём: 100 мл</div>
+                  <div class="price">
+                     1452 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/zhivitsa_kedrovaya_7/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e7c/210_210_240cd750bba9870f18aada2478b24840a/nbk7t0ek6jfgbqb6z0wyci38f9yukwaz.jpg?165421660243373">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/zhivitsa_kedrovaya_7/">Живица кедровая 7%</a>
+                  <div class="value">Объём: 100 мл</div>
+                  <div class="price">
+                     570 руб.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> 
+      <div class="slick-page">
+         <div class="slick-inner">
+            <h2 class="center">
+               Хиты продаж
+            </h2>
+            <div class="slick-slider">
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/khity_prodazh/kollagen_s_gialuronovoy_kislotoy_vitup/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/d2c/210_210_240cd750bba9870f18aada2478b24840a/m0a12re2ldosye5s5htuw5p2gos3634h.jpg?164242821237746">
+                  </a>
+                  <a class="title" href="/catalog/khity_prodazh/kollagen_s_gialuronovoy_kislotoy_vitup/">«Коллаген с гиалуроновой кислотой» VitUp</a>
+                  <div class="value">Объём: 10 стиков по 13 г</div>
+                  <div class="price">
+                     1250 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/khity_prodazh/antisilverin_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/703/210_210_240cd750bba9870f18aada2478b24840a/zyk7784nkf0y7sz0070j2ec6boiv2un0.jpg?165482747228251">
+                  </a>
+                  
+                  <a class="title" href="/catalog/khity_prodazh/antisilverin_sredstvo_dlya_vosstanovleniya_naturalnogo_tsveta_volos/">Антисильверин средство для восстановления натурального цвета волос</a>
+                  <div class="value">Объём: 150 мл</div>
+                  <div class="hit-new__price-block">
+                     <div class="hit-new__old-price">
+                        1250 руб
+                     </div>
+                     <div class="dicount-sticker">-10%</div>
+                     <div class="hit-new__new-price">
+                        1125 руб.
+                     </div>
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/ukhod_za_litsom/silapant_penka_dlya_umyvaniya_s_pantogematogenom/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/223/210_210_240cd750bba9870f18aada2478b24840a/xlw3slefeusg3dqev2s5uypqudp0bq4x.jpg?164242820517906">
+                  </a>
+                  <a class="title" href="/catalog/ukhod_za_litsom/silapant_penka_dlya_umyvaniya_s_pantogematogenom/">Силапант Пенка для умывания</a>
+                  <div class="value">Объём: 175 мл</div>
+                  <div class="price">
+                     488 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/alteya/vitamin_d3_vitup/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/695/210_210_240cd750bba9870f18aada2478b24840a/hs1cz30z6ng6ihyxyha1vtmthqkstxha.jpg?162756546033006">
+                  </a>
+                  <a class="title" href="/catalog/alteya/vitamin_d3_vitup/">Витамин D3 VitUp</a>
+                  <div class="value">Объём: 60 капсул по 230 мг </div>
+                  <div class="price">
+                     453 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/khity_prodazh/antisilverin_shampun/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a64/210_210_240cd750bba9870f18aada2478b24840a/9e2wjh4ex7oppg06qibxxu4t66ra4ozj.jpg?165482747235644">
+                  </a>
+                  <a class="title" href="/catalog/khity_prodazh/antisilverin_shampun/">Антисильверин шампунь</a>
+                  <div class="value">Объём: 150 мл</div>
+                  <div class="price">
+                     460 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/ukhod_za_litsom/zhidkie_patchi_dlya_kozhi_vokrug_glaz_s_peptidami/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/518/210_210_240cd750bba9870f18aada2478b24840a/nav3kr2o0gum80xwakffm5mt9o4uuqka.jpg?164242820530831">
+                  </a>
+                  <a class="title" href="/catalog/ukhod_za_litsom/zhidkie_patchi_dlya_kozhi_vokrug_glaz_s_peptidami/">Жидкие патчи для кожи вокруг глаз с пептидами «SILAPANT»</a>
+                  <div class="value">Объём: 30 мл</div>
+                  <div class="price">
+                     715 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/ukhod_za_nogami/mozolin_krem_ukhod/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/3a6/210_210_240cd750bba9870f18aada2478b24840a/1l551q0nmgxxtvhxw30c678zdd7nsj6g.jpg?164819382049886">
+                  </a>
+                  <a class="title" href="/catalog/ukhod_za_nogami/mozolin_krem_ukhod/">Мозолин MOZOLIN Крем-бальзам смягчающий</a>
+                  <div class="value">Объём: 75 мл</div>
+                  <div class="price">
+                     359 руб.
+                  </div>
+               </div>
+               <div class="slick-item">
+                  <a class="picture" href="/catalog/zdorovoe_pitanie/maslo_kedrovoe_legendarnoe_sibirskoe/">
+                  <img class="preview_pic" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a54/210_210_240cd750bba9870f18aada2478b24840a/h1sphz8ml68rqvn6pgb1dx4jpv514zm1.jpg?165418470323205">
+                  </a>
+                  <a class="title" href="/catalog/zdorovoe_pitanie/maslo_kedrovoe_legendarnoe_sibirskoe/">МАСЛО КЕДРОВОЕ «ЛЕГЕНДАРНОЕ СИБИРСКОЕ»</a>
+                  <div class="value">Объём: 250 мл</div>
+                  <div class="price">
+                     2341 руб.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="best-series-container">
+         <div class="best-series-wrapper">
+            <h2>Наиболее популярные серии</h2>
+            <div class="best-series" data-jcarousel="true">
+               <ul style="left: 0px; top: 0px;">
+                  <div class="item big-item">
+                     <a class="item-title" href="/catalog/silapant/">Силапант</a>
+                     <a href="/catalog/silapant/">
+                        <div class="item-description">
+                           <div class="title">Силапант</div>
+                           Пантогематоген – уникальный природный компонент, обладающий мощным омолаживающим эффектом.
+                        </div>
+                     </a>
+                     <img class="preview_picture" ;="" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/uf/766/560_390_240cd750bba9870f18aada2478b24840a/7664a22a40166584ec5c83c6d20ef044.jpg?1540955770156630">		     		
+                  </div>
+                  <div class="item ">
+                     <a class="item-title" href="/catalog/planet_spa_altai/">Planet SPA Altai</a>
+                     <a href="/catalog/planet_spa_altai/">
+                        <div class="item-description">
+                           <div class="title">Planet SPA Altai</div>
+                           Уникальность косметической серии Planet Spa Altai состоит в высоком содержании экстрактов растений, собранных на Алтае.
+                        </div>
+                     </a>
+                     <img class="preview_picture" ;="" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/uf/7e8/280_190_240cd750bba9870f18aada2478b24840a/7e84559c928f10d44ae3d3c4cb7eebbd.jpg?149943590552817">		     		
+                  </div>
+                  <div class="item ">
+                     <a class="item-title" href="/catalog/altaybio/">Алтайбио</a>
+                     <a href="/catalog/altaybio/">
+                        <div class="item-description">
+                           <div class="title">Алтайбио</div>
+                           Идея создания серии - дать возможность прикоснуться к частичке Алтая каждому жителю России.
+                        </div>
+                     </a>
+                     <img class="preview_picture" ;="" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/uf/fb3/280_190_240cd750bba9870f18aada2478b24840a/fb3f2accd2f302cbb8d578ed0469f9f1.jpg?149943590561867">		     		
+                  </div>
+                  <div class="item ">
+                     <a class="item-title" href="/catalog/antisilverin/">Антисильверин</a>
+                     <a href="/catalog/antisilverin/">
+                        <div class="item-description">
+                           <div class="title">Антисильверин</div>
+                           Восстанавливает натуральный цвет волос всего за 2 недели применения. <br>
+                           ДАННЫЙ ТОВАР МОЖНО ПРИОБРЕСТИ ТОЛЬКО ЧЕРЕЗ ИНТЕРНЕТ МАГАЗИН.
+                        </div>
+                     </a>
+                     <img class="preview_picture" ;="" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/uf/895/280_190_240cd750bba9870f18aada2478b24840a/89516a3b8fef42b366b0b27303f29fe0.jpg?149943590547215">		     		
+                  </div>
+                  <div class="item ">
+                     <a class="item-title" href="/catalog/alteya/">Алтэя</a>
+                     <a href="/catalog/alteya/">
+                        <div class="item-description">
+                           <div class="title">Алтэя</div>
+                           Планета косметических средств, масел и чаев для сохранения красоты и здоровья.
+                        </div>
+                     </a>
+                     <img class="preview_picture" ;="" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/uf/dcf/280_190_240cd750bba9870f18aada2478b24840a/dcfdbf75a1c4ebf79bbbeca45192e561.jpg?149943590563345">		     		
+                  </div>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="wrapper">
+         <h2 class="center news-list-main-title"><a href="/o-nas/novosti/">Новости</a></h2>
+         <div class="news-list">
+            <div class="news-item" id="bx_651765591_8212">
+               <a href="/o-nas/novosti/skidki_na_vsye/"><img class="preview_picture" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/b43/180_120_240cd750bba9870f18aada2478b24840a/2cnkzg50sb74q5pvfryci1jw73ypgdxc.jpg?165421664438801"></a>
+               <div class="text">
+                  <a href="/o-nas/novosti/skidki_na_vsye/">Скидки на всё!</a>
+                  <div class="preview-text">Дарим скидки в честь нашего Дня Рождения!</div>
+                  <span class="news-date-time">2 июня 2022</span>
+               </div>
+            </div>
+            <div class="news-item" id="bx_651765591_8201">
+               <a href="/o-nas/novosti/aktsiya_darim_shampun_antisilverin/"><img class="preview_picture" src="//1806152.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/fc5/180_120_240cd750bba9870f18aada2478b24840a/hdn982an7wsxh3vrdx1tkle82go37twk.jpg?165344326238041"></a>
+               <div class="text">
+                  <a href="/o-nas/novosti/aktsiya_darim_shampun_antisilverin/">Акция! Дарим шампунь "Антисильверин"</a>
+                  <div class="preview-text">За покупку трех флаконов средства "Антисильверин" дарим шампунь этой серии.</div>
+                  <span class="news-date-time">24 мая 2022</span>
+               </div>
+            </div>
+            <div class="clear"></div>
+         </div>
+         <div class="why-we">
+            <div class="item">
+               <img src="//1806152.ssl.1c-bitrix-cdn.ru/images/why-we-01.jpg?149943559724324">
+               <div class="anotation">
+                  Собственное производство
+               </div>
+            </div>
+            <div class="item">
+               <img src="//1806152.ssl.1c-bitrix-cdn.ru/images/why-we-02.jpg?149943559711146">
+               <div class="anotation">
+                  Не тестируется на животных
+               </div>
+            </div>
+            <div class="item">
+               <img src="//1806152.ssl.1c-bitrix-cdn.ru/images/why-we-03.jpg?149943559719676">
+               <div class="anotation">
+                  Натуральные ингредиенты
+               </div>
+            </div>
+            <div class="item">
+               <img src="//1806152.ssl.1c-bitrix-cdn.ru/images/why-we-04.jpg?149943559715415">
+               <div class="anotation">
+                  Опыт работы с 1999 года
+               </div>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div class="wrapper content cont-page">
+         <!-- <button onclick="samByOneClick.open(event);" >test</button> -->
+         <!-- icons -->
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+         <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </div>
+      <div class="main-menu">
+         <div class="wrapper">
+            <a class="home-icon" href="/"></a>
+            <ul class="inner-main-menu">
+               <li><a href="/o-nas/">О нас</a></li>
+               <li><a href="/catalog/">Каталог</a></li>
+               <li><a href="/gde-kupit/">Где купить</a></li>
+               <li><a href="/kontraktnoe-proizvodstvo/">Контрактное производство</a></li>
+               <li><a href="/kontakty/">Контакты</a></li>
+               <li><a href="/optovikam/">Оптовикам</a></li>
+               <li><a href="/articles/"> Статьи</a></li>
+            </ul>
+         </div>
+      </div>
+      <footer>
+         <div id="cookie-modal" class="cookies cookie-notification-modal">
+            <p class="cookies-text">
+               Для повышения Вашего удобства этот сайт использует cookie для хранения данных. Продолжая использовать сайт, Вы даете своё согласие на работу с этими файлами.		
+            </p>
+            <button class="btn-cookie js-coockie-agree" type="button">
+            Хорошо, принимаю
+            </button>
+         </div>
+         <div class="wrapper">
+            <div class="contact-and-subscribe">
+               <div class="p-soc">
+                  <div class="phone">8-800-2000-950</div>
+                  Звонок по России бесплатный
+                  <div class="social-icons">
+                     <a class="vk-icon" target="_blank" href="https://vk.com/kosmetikaltay"></a>
+                     <a class="yt-icon" target="_blank" href="https://www.youtube.com/channel/UC1ojRazgAI9ek6xkZw5r_FQ"></a>
+                     <a class="ok-icon" target="_blank" href="http://ok.ru/group/52177653334155"></a>
+                  </div>
+               </div>
+               <div class="mail"><a href="mailto:market@dvelinii.ru">market@dvelinii.ru</a></div>
+               <div class="bx-subscribe" id="sender-subscribe">
+                  <div class="title">Подписка на новостную рассылку</div>
+                  <!--'start_frame_cache_sender-subscribe'-->	
+                  <form role="form" method="post" action="/" onsubmit="BX('bx_subscribe_btn_sljzMT').disabled=true;">
+                     <input type="hidden" name="sessid" id="sessid" value="7528bf0eff87737edd694f83a34d900f">		<input type="hidden" name="sender_subscription" value="add">
+                     <div class="bx-input-group">
+                        <input class="bx-form-control" type="email" name="SENDER_SUBSCRIBE_EMAIL" value="" title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
+                     </div>
+                     <div class="bx_subscribe_submit_container">
+                        <button class="sender-btn btn-subscribe" id="bx_subscribe_btn_sljzMT"><span>Подписаться</span></button>
+                     </div>
+                  </form>
+                  <!--'end_frame_cache_sender-subscribe'-->
+               </div>
+            </div>
+            <div class="footer-menu">
+               <h3>Компания</h3>
+               <ul class="left-menu">
+                  <li><a href="/o-nas/">О нас</a></li>
+                  <li><a href="/kontraktnoe-proizvodstvo/">Контрактное производство</a></li>
+                  <li><a href="/kontakty/">Контакты</a></li>
+               </ul>
+               <!--<a class="cr" href="http://svi-ter.ru/" target="_blank">Разработка сайта: студия «Свитер»</a> -->
+            </div>
+            <div class="footer-menu">
+               <h3>Магазин</h3>
+               <ul class="left-menu">
+                  <li><a href="/catalog/">Каталог</a></li>
+                  <li><a href="/o-dostavke/">Доставка и оплата</a></li>
+                  <li><a href="/polzovatelskoe-soglashenie/" target="_blank">Пользовательское соглашение</a></li>
+               </ul>
+               <img class="cards-icon" src="//1806152.ssl.1c-bitrix-cdn.ru/images/cards.jpg?14994355975916">
+            </div>
+         </div>
+         <script>
+            $('.sandwich').click(function(){
+                $('body').toggleClass('openedMob-menu');
+            });
+            
+            function checkNalojenniyPlatej(){
+                let naloj = 0;
+                $(document).on('each', '.bx-soa-cart-total-line', function(){
+                    if($(this).find('.bx-soa-cart-t').html() == 'Дополнительно наложенный платеж:'){
+                        $(this).addClass('naloj_platej_val');
+                        naloj = parseFloat($(this).find('.bx-soa-cart-d').html().replace('~', '').replace(' руб.', ''));
+                    }
+                });
+                console.log(naloj);
+            }
+            
+            $(document).ajaxComplete(function(){
+                // checkNalojenniyPlatej();
+            });
+            $('.bx-soa-cart-total').bind("DOMSubtreeModified",function(){
+                // checkNalojenniyPlatej();
+            });
+         </script>
+         <style type="text/css">
+            /*artner block*/
+            .block_part_title{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            }
+            .partners_block{
+            margin-bottom: 50px;
+            }
+            .dflex{
+            display: flex;
+            flex-wrap: wrap;
+            }
+            .item_partner{
+            width: 20%;
+            padding: 20px; 
+            }
+            .item_partner a,
+            .item_partner img{
+            display: block;
+            width: 100%; 
+            }
+            .partners_wrapper{
+            align-items: center;
+            justify-content: center;
+            }
+            .alert-danger {
+            color: #a9F442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            text-align: center;
+            }
+            .alert {
+            border: 0;
+            border-radius: 1px;
+            font-size: 14px;
+            padding: 15px;
+            margin-bottom: 20px;
+            }
+            .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            }
+            .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            }
+         </style>
+         <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-80419714-3', 'auto');
+            ga('send', 'pageview');
+            
+         </script>
+         <!-- Yandex.Metrika counter -->
+         <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+            ym(36982350, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript>
+            <div><img src="https://mc.yandex.ru/watch/36982350" style="position:absolute; left:-9999px;" alt="" /></div>
+         </noscript>
+         <!-- /Yandex.Metrika counter -->
+      </footer>

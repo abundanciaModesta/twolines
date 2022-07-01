@@ -1,0 +1,153 @@
+.gift-page {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.gift-page__box {
+width: 370px;
+height: 460px;
+background: url('../images/gift-box-bg.jpg') no-repeat;
+position: relative;
+}
+
+.gift-page__box img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.gift-page__box-inner {
+width: 250px;
+height: 160px;
+position: absolute;
+bottom: 35px;
+left: 65px;
+}
+
+.gift-page__content {
+width: calc(100% - 410px);
+padding: 40px 0 40px 0;
+}
+
+.gift-page__box-item {
+display: flex;
+align-content: center;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.gift-page__box-item-delete {
+width: 120px;
+height: 28px;
+display: none;
+line-height: 30px;
+background: #de2328;
+white-space: nowrap;
+font-size: 14px;
+color: #fff;
+font-family: 'HouschkaPro-Bold';
+text-transform: uppercase;
+text-align: center;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+border-bottom: 2px solid #a90005;
+text-decoration: none;
+padding: 0px !important;
+position: absolute;
+left: calc(50% - 60px);
+top:calc(50% - 14px);
+cursor: pointer;
+transition: 700ms;
+}
+
+.gift-page__box-item:hover .gift-page__box-item-delete {
+display: block;
+}
+
+#gift-var-1 .gift-page__box-item {
+height: 80px;
+width: 100%;
+}
+
+#gift-var-1 .gift-page__box-item img {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+width: 80px;
+height: 140px;
+max-height: 140px;
+}
+
+#gift-var-1 .gift-page__box-item:nth-child(1) {
+position: absolute;
+top:0;
+}
+
+#gift-var-1 .gift-page__box-item:nth-child(2) {
+position: absolute;
+top:81px;
+}
+
+#gift-var-2 .gift-page__box-item:nth-child(1) {
+position: absolute;
+top:0;
+height: 80px;
+width: 100%;
+}
+
+#gift-var-2 .gift-page__box-item:nth-child(1) img {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+width: 80px;
+height: 140px;
+max-height: 140px;
+}
+
+#gift-var-2 .gift-page__box-item:nth-child(2) {
+position: absolute;
+top:81px;
+left: 0;
+}
+
+#gift-var-2 .gift-page__box-item:nth-child(2) img {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+width: 80px;
+height: 140px;
+max-height: 140px;
+}
+
+#gift-var-2 .gift-page__box-item:nth-child(3) {
+position: absolute;
+top:81px;
+left: 120px;
+}
+
+#gift-var-2 .gift-page__box-item:nth-child(3) img {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+width: 80px;
+height: 140px;
+max-height: 140px;
+}
+
+.gift-page__sidebar-text-value {
+font-family: 'HouschkaPro-DemiBold';
+font-size: 17px;
+text-transform: uppercase;
+color: #62bf7c;
+text-align: center;
+}
