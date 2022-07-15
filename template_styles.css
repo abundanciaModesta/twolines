@@ -2051,6 +2051,10 @@
 	  position: relative;
 	  }
 	  
+		.bx-sls .bx-ui-sls-pane {
+			max-width: 712px !important;
+		}
+
 	  .item-detail .title-and-price .shoping-cart-and-price .item_info_section .item_buttons_counter_block {
 	  width: 139px;
 	  height: 100px;
@@ -2154,7 +2158,7 @@
 					flex-direction: row !important;
 					justify-content: space-between !important;
 				}
-				select#delivery, select#payment {
+				select#delivery, select#payment, input#email, input#address, input#name, input#tel {
 					width: 173px !important;
 				}
 	  
