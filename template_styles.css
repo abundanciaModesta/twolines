@@ -2158,8 +2158,34 @@
 					flex-direction: row !important;
 					justify-content: space-between !important;
 				}
-				select#delivery, select#payment, input#email, input#address, input#name, input#tel {
+				select#delivery, select#payment {
 					width: 173px !important;
+				}
+				input#email,
+				input#address,
+				input#name,
+				input#tel {
+					width: 185px !important;
+				}
+				@media (max-width:768px) {
+					form.form {
+						height: 100%;
+					}
+					.modal-wrapper {
+						overflow: scroll;
+						height: 100%;
+					}
+					select#delivery,
+					select#payment,
+					input#email,
+					input#address,
+					input#name,
+					input#tel {
+						width: 295px !important;
+					}
+					.form button {
+						margin-bottom: 80px;
+					}
 				}
 	  
 	  .item-detail .title-and-price .shoping-cart-and-price .item_info_section .in-stock-off {
@@ -3993,4 +4019,27 @@
 	.slick-page {
 		max-width: 300px;
 	}
+}
+@font-face {
+	font-family: 'HouschkaPro-Bold';
+	src: url('/fonts/HouschkaPro-Bold.eot');
+	src: url('/fonts/HouschkaPro-Bold.woff2') format('woff2'),
+		url('/fonts/HouschkaPro-Bold.woff') format('woff'),
+		url('/fonts/HouschkaPro-Bold.ttf') format('truetype'),
+		url('/fonts/HouschkaPro-Bold.svg#HouschkaPro-Bold') format('svg'),
+		url('/fonts/HouschkaPro-Bold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HouschkaPro-DemiBold';
+	src: url('/fonts/HouschkaPro-DemiBold.eot');
+	src: url('/fonts/HouschkaPro-DemiBold.woff2') format('woff2'),
+		url('/fonts/HouschkaPro-DemiBold.woff') format('woff'),
+		url('/fonts/HouschkaPro-DemiBold.ttf') format('truetype'),
+		url('/fonts/HouschkaPro-DemiBold.svg#HouschkaPro-DemiBold') format('svg'),
+		url('/fonts/HouschkaPro-DemiBold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
 }
