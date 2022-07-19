@@ -2167,14 +2167,7 @@
 				input#tel {
 					width: 185px !important;
 				}
-				@media (max-width:768px) {
-					form.form {
-						height: 100%;
-					}
-					.modal-wrapper {
-						overflow: scroll;
-						height: 100%;
-					}
+				@media (max-width:375px) {
 					select#delivery,
 					select#payment,
 					input#email,
@@ -2183,6 +2176,35 @@
 					input#tel {
 						width: 295px !important;
 					}
+				}
+				@media (max-width:320px) {
+					select#delivery,
+					select#payment,
+					input#email,
+					input#address,
+					input#name,
+					input#tel {
+						width: 240px !important;
+					}
+				}
+				@media (max-width:1170px) {
+					select#delivery,
+					select#payment,
+					input#email,
+					input#address,
+					input#name,
+					input#tel {
+						width: 320px !important;
+					}
+					form.form {
+						height: 100%;
+					}
+
+					.modal-wrapper {
+						overflow: scroll;
+						height: 100%;
+					}
+
 					.form button {
 						margin-bottom: 80px;
 					}
