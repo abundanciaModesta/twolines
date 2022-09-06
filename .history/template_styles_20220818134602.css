@@ -699,7 +699,7 @@ a.title {
   width: 23px;
   height: 26px;
   background: url(/images/hits-arrow.png) top left no-repeat;
-  display: block ;
+  display: block !important;
   font-size: 0px;
 }
 .slick-next {
@@ -721,60 +721,22 @@ a.title {
 .slider-nav {
   width: 100%;
   max-width: 378px;
-  margin-bottom: 10px;
 }
 .slick-slider2 .slick-next {
   right: 3px;
 }
-
-.slick-arrow {
-  display: none;
-}
 .slider-nav .slick-prev,.slider-nav .slick-next {
   top: -150px;
 }
-
-.slider_discount {
-  position: relative;
-}
-
-.slider_discount .dicount-sticker {
-  width: 60px;
-  height: 60px;
-  background: #ff0000;
-  border-radius: 30px;
-  position: absolute;
-  top: 0;
-  left: 328px;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  line-height: 60px;
-  z-index: 2;
-  font-family: "HouschkaPro-Bold";
-}
-
-@media (max-width: 1024px) {
-  .slick-arrow {
-    display: block;
-  }
-}
-
 @media (max-width: 375px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -120px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 280px;
-  }
+  top: -120px;
+}
 }
 @media (max-width: 325px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -100px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 230px;
-  }
+  top: -100px;
+}
 }
 .slider-nav .slick-prev {
   left: -7px;
@@ -899,6 +861,8 @@ a.title {
   right: 20px;
 }
 
+.about-page {
+}
 
 .about-page h2 {
   text-align: center;
@@ -935,6 +899,8 @@ a.title {
   padding: 0;
 }
 
+.devl-pay {
+}
 
 .devl-pay .first-block {
   background: url("/images/del-pay-first.jpg") top left no-repeat;
@@ -980,6 +946,8 @@ a.title {
   background: url("/images/del-icon-coureer.jpg") top center no-repeat;
 }
 
+.devl-pay .delivery-body {
+}
 
 .devl-pay .delivery-body .item {
   display: none;
@@ -1001,7 +969,14 @@ a.title {
   /* //cursor: pointer; */
 }
 
+.devl-pay .pay-selector .item:hover {
+  /* //background-position: bottom center;
+	  //opacity: 0.8; */
+}
 
+.devl-pay .pay-selector .active {
+  /* //background-position: bottom center !important; */
+}
 
 .devl-pay .pay-selector .cash {
   background: url("/images/del-icon-cash.jpg") top center no-repeat;
@@ -1262,6 +1237,8 @@ a.title {
   padding: 0px 0px 0px 10px;
 }
 
+.why-we {
+}
 
 .why-we .item {
   width: 270px;
@@ -1292,6 +1269,9 @@ a.title {
   text-transform: uppercase;
   font-family: "HouschkaPro-DemiBold";
   padding: 15px 0px 0px 20px;
+}
+
+.opt-page {
 }
 
 .opt-page .top-info {
@@ -1385,6 +1365,8 @@ a.title {
   opacity: 0.8;
 }
 
+.brands-list {
+}
 
 .brands-list h3 {
   color: #62bf7c;
@@ -1399,6 +1381,9 @@ a.title {
 .brands-list li img {
   position: absolute;
   left: -64px;
+}
+
+.awards {
 }
 
 .awards .col-2 {
@@ -1903,6 +1888,9 @@ a.title {
   height: 292px !important;
 }
 
+.inner-list-cat .item a {
+}
+
 .inner-list-cat .item:last-child {
   height: 308px !important;
 }
@@ -1965,6 +1953,10 @@ a.title {
 .modern-page-navigation .modern-page-next {
   display: none;
 }
+
+.item-detail {
+}
+
 .item-detail .images {
   width: 380px;
   float: left;
@@ -2499,6 +2491,9 @@ input#tel {
   text-transform: inherit;
 }
 
+.kachestvo-list {
+}
+
 .kachestvo-list .item {
   width: 415px;
   min-height: 200px;
@@ -2689,6 +2684,9 @@ input[type="reset"]:hover,
   background: #84d99c !important;
 }
 
+.col-sm-9 {
+}
+
 .col-xs-12 {
   width: 95%;
 }
@@ -2769,6 +2767,8 @@ input[type="reset"]:hover,
   height: 292px !important;
 }
 
+.bx_my_order .bx_my_order_table {
+}
 
 .bx_my_order .bx_my_order_table thead tr td,
 .bx_order_list .bx_order_list_table thead tr td,

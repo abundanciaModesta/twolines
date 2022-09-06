@@ -732,6 +732,7 @@ a.title {
 }
 .slider-nav .slick-prev,.slider-nav .slick-next {
   top: -150px;
+  
 }
 
 .slider_discount {
@@ -745,7 +746,7 @@ a.title {
   border-radius: 30px;
   position: absolute;
   top: 0;
-  left: 328px;
+  right: -10px;
   color: #fff;
   font-size: 16px;
   text-align: center;
@@ -754,27 +755,15 @@ a.title {
   font-family: "HouschkaPro-Bold";
 }
 
-@media (max-width: 1024px) {
-  .slick-arrow {
-    display: block;
-  }
-}
-
 @media (max-width: 375px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -120px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 280px;
-  }
+  top: -120px;
+}
 }
 @media (max-width: 325px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -100px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 230px;
-  }
+  top: -100px;
+}
 }
 .slider-nav .slick-prev {
   left: -7px;

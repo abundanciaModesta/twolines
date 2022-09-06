@@ -762,19 +762,13 @@ a.title {
 
 @media (max-width: 375px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -120px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 280px;
-  }
+  top: -120px;
+}
 }
 @media (max-width: 325px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -100px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 230px;
-  }
+  top: -100px;
+}
 }
 .slider-nav .slick-prev {
   left: -7px;

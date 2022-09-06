@@ -699,7 +699,7 @@ a.title {
   width: 23px;
   height: 26px;
   background: url(/images/hits-arrow.png) top left no-repeat;
-  display: block ;
+  display: block !important;
   font-size: 0px;
 }
 .slick-next {
@@ -726,10 +726,6 @@ a.title {
 .slick-slider2 .slick-next {
   right: 3px;
 }
-
-.slick-arrow {
-  display: none;
-}
 .slider-nav .slick-prev,.slider-nav .slick-next {
   top: -150px;
 }
@@ -739,42 +735,23 @@ a.title {
 }
 
 .slider_discount .dicount-sticker {
-  width: 60px;
-  height: 60px;
-  background: #ff0000;
-  border-radius: 30px;
   position: absolute;
   top: 0;
-  left: 328px;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  line-height: 60px;
-  z-index: 2;
-  font-family: "HouschkaPro-Bold";
-}
-
-@media (max-width: 1024px) {
-  .slick-arrow {
-    display: block;
-  }
+  right: 0;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #ff0000 ;
 }
 
 @media (max-width: 375px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -120px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 280px;
-  }
+  top: -120px;
+}
 }
 @media (max-width: 325px) {
   .slider-nav .slick-prev,.slider-nav .slick-next {
-    top: -100px;
-  }
-  .slider_discount .dicount-sticker {
-    left: 230px;
-  }
+  top: -100px;
+}
 }
 .slider-nav .slick-prev {
   left: -7px;
