@@ -2596,7 +2596,7 @@ footer .contact-and-subscribe .phone {
 }
 
 footer .contact-and-subscribe .phone a:hover {
-  border-bottom: 1px solid #2a2d32;
+  text-decoration: solid;
 }
 
 footer .contact-and-subscribe .social-icons {

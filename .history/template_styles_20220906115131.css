@@ -2595,8 +2595,8 @@ footer .contact-and-subscribe .phone {
   margin: 35px 0px 3px 0px;
 }
 
-footer .contact-and-subscribe .phone a:hover {
-  border-bottom: 1px solid #2a2d32;
+footer .contact-and-subscribe .phone:hover a {
+  text-decoration: solid;
 }
 
 footer .contact-and-subscribe .social-icons {
