@@ -74,10 +74,8 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 800,
-    autoplay: true,
-    autoplaySpeed: 8000,
-    arrows: false,
-    dots: true,
+    autoplay: false,
+    autoplaySpeed: 10000,
   }),
    $('.slider-for').slick({
     slidesToShow: 1,

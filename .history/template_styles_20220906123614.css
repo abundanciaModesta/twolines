@@ -522,7 +522,7 @@ h3 {
 .slider-wrapperer .slick-dots {
   position: absolute;
   display: flex;
-  bottom: 20px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }

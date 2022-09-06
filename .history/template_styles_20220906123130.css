@@ -522,29 +522,7 @@ h3 {
 .slider-wrapperer .slick-dots {
   position: absolute;
   display: flex;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
 }
-.slider-wrapperer .slick-dots li {
-  list-style: none;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 0;
-}
-
-.slider-wrapperer .slick-dots li button {
-  width: 80px !important;
-  height: 10px !important;
-  border: none;
-  background-color: #62bf7c;
-}
-
-.slider-wrapperer .slick-dots li.slick-active button {
-  background-color: #7d7470;
-}
-
-
 
 .slick-slider-banner {
   width: 100%;

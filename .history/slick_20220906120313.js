@@ -69,15 +69,13 @@ $(document).ready(function(){
             },
           ],
   })
-  $('.slick-slider-banner').slick({
+  $('.slick-slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 800,
     autoplay: true,
-    autoplaySpeed: 8000,
-    arrows: false,
-    dots: true,
+    autoplaySpeed: 10000,
   }),
    $('.slider-for').slick({
     slidesToShow: 1,
